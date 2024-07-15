@@ -7,3 +7,4 @@ This Go project periodically fetches temperature readings from two sensors and p
 - `main.go`: Main application file that sets up a scheduler to fetch sensor data every second.
 
 ## How to Run
+ go run main.go
