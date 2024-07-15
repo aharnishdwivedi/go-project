@@ -38,7 +38,7 @@ func sendApiCalls() {
 	fmt.Println("sendApiCalls triggered")
 
 	// we are looping to send api calls
-	for i := 1; i <= 2; i++ {
+	for sensorNumber := 1; sensorNumber <= 2; sensorNumber++ {
 		wg.Add(1)
 		go func(id int) {
 			defer wg.Done()
@@ -49,7 +49,7 @@ func sendApiCalls() {
 			}
 			// Print our respnose
 			fmt.Printf("Sensor ID: %d, TempValue: %d, TimeStamp: %s\n", res.ID, res.TempValue, res.TimeStamp)
-		}(i)
+		}(sensorNumber)
 	}
 
 	// Wait for all goroutines to finish
